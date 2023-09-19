@@ -14,7 +14,7 @@ function promptUser() {
         rl.question(`Enter the shape color (color keyword or hexadecimal number) for ${shape}: `, (shapeColor) => {
         
           if (!text || !textColor || !shape || !shapeColor) {
-            console.error('All inputs are required.');
+            console.error('All Inputs are required.');
             rl.close();
             return;
           }
