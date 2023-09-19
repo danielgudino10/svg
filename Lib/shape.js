@@ -21,11 +21,11 @@ class Triangle {
   
   class Square {
     constructor(side) {
-      this.side = side; // Set the side length when creating a Square object
+      this.side = side; 
     }
   
     calculateArea() {
-      return this.side ** 2; // Calculate the area by squaring the side length
+      return this.side ** 2; 
     }
   }
   

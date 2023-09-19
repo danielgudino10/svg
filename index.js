@@ -12,14 +12,14 @@ function promptUser() {
       const shapeOptions = ['circle', 'triangle', 'square'];
       rl.question(`Choose a shape (${shapeOptions.join(', ')}): `, (shape) => {
         rl.question(`Enter the shape color (color keyword or hexadecimal number) for ${shape}: `, (shapeColor) => {
-          // Ensure the text and color inputs are not empty
+        
           if (!text || !textColor || !shape || !shapeColor) {
             console.error('All inputs are required.');
             rl.close();
             return;
           }
 
-          // Command to execute the Python script with user specifications
+          
           const pythonScriptPath = 'scripts/generate_svg.py';
           const command = `python ${pythonScriptPath} ${text} ${textColor} ${shape} ${shapeColor} --output_dir=./`;
 
@@ -32,7 +32,7 @@ function promptUser() {
 
             console.log('Generated logo.svg');
 
-            // Open the SVG file in a browser
+          
             exec('xdg-open logo.svg', (error, stdout, stderr) => {
               if (error) {
                 console.error(`Error opening SVG file: ${stderr}`);
@@ -46,5 +46,5 @@ function promptUser() {
   });
 }
 
-// Example usage
+
 promptUser();
